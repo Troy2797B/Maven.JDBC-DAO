@@ -13,9 +13,9 @@ public class JDBC {
     static {
 
         try {
-            URL = getURL();
-            USER = getUser();
-            PASS = getPass();
+            URL = "URL";
+            USER = "USER";
+            PASS = "PASS";
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
