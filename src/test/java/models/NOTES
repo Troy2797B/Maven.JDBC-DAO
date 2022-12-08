@@ -1,0 +1,20 @@
+We are making a Data Access Layer. This allows us to access the information in a database (SQL).
+
+A DAO is a Data Access Object. This object can do CRUD operations. It can CRUD from our table.
+A DTO is a Data Transfer Object.
+This is a mapping to the table. This class is directly correlating to the table in your database.
+Each column is a field, there are getters and setters, and a constructor for the object.
+So the DAO acts on the dto which can connect to the table????
+
+DTOClass: this layer should contain a simple class called Data Transfer Object(DTO)
+this object is just a simple mapping to the table, every column in the table would
+be a member variable in the class. our aim is to order this layer to create, modify,
+delete or search for an entity. Using simple java objects rather than dealing
+with SQL statements and other database related commands. We want to map this table
+to our java code, we can do so by creating a simple class(bean) that contains the same fields.
+
+Now make a constructor: A good practice is to provide default empty constructor, a full constructor and a full constructor without the id parameter.
+
+
+Now we have to make a connector class. It connects to the database using a URL. There is a specific syntax for JDBC MySql.
+Look here for more info: https://www.baeldung.com/java-jdbc-url-format
