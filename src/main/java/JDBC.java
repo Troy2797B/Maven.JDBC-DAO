@@ -6,20 +6,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class JDBC {
-    public static final String URL;
-    public static final String USER;
-    public static final String PASS;
-
-    static {
-
-        try {
-            URL = "URL";
-            USER = "USER";
-            PASS = "PASS";
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    public static final String URL= "URL";
+    public static final String USER = "USER";
+    public static final String PASS = "PASS";
 
     public static Connection getConnection() {
         try {

@@ -7,20 +7,9 @@ import java.sql.SQLException;
 
 public class JDBCTest {
 
-    public static final String URL;
-    public static final String USER;
-    public static final String PASS;
-
-    static {
-
-        try {
-            URL = getURL();
-            USER = getUser();
-            PASS = getPass();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    public static final String URL="URL";
+    public static final String USER= "USER";
+    public static final String PASS = "PASS";
 
     /**
      * Get a connection to database
