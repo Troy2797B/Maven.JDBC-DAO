@@ -13,9 +13,10 @@ public class JDBC {
     public static Connection getConnection() {
         try {
             DriverManager.registerDriver(new Driver());
+            System.out.println("Victory!!!");
             return DriverManager.getConnection(URL, USER, PASS);
-        } catch (SQLException e) {
-            throw new RuntimeException("Error connecting to database", e);
+        } catch (SQLException ex) {
+            throw new RuntimeException("Error connecting to database", ex);
         }
     }
 }

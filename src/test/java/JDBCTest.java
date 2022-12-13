@@ -1,4 +1,6 @@
 import com.mysql.cj.jdbc.Driver;
+import junit.framework.Assert;
+import org.junit.Test;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -15,23 +17,27 @@ public class JDBCTest {
      * Get a connection to database
      * @return Connection object
      */
-    public static Connection getConnection() throws ClassNotFoundException, SQLException {
-        String DRIVER = "com.mysql.cj.jdbc.Driver";
-        Class.forName(DRIVER);
-        return con = DriverManager.getConnection(URL,USER,PASS);
+//    public static Connection getConnection() {
+////        String DRIVER = "com.mysql.cj.jdbc.Driver";
+////        Class.forName(DRIVER);
+////        return DriverManager.getConnection(URL,USER,PASS);
 //        try {
 //            DriverManager.registerDriver(new Driver());
 //            return DriverManager.getConnection(URL, USER, PASS);
 //        } catch (SQLException ex) {
 //            throw new RuntimeException("Error connecting to the database", ex);
 //        }
-    }
+//    }
 
     /**
      * Test Connection
      */
-    public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        Connection connection = JDBCTest.getConnection();
-    }
-
+//    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+//        Connection connection = JDBCTest.getConnection();
+//    }
+        @Test
+        public void getConnectTest() throws ClassNotFoundException {
+            Connection connection = JDBC.getConnection();
+            Assert.assertNotNull(connection);
+        }
 }
